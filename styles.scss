@@ -1,0 +1,199 @@
+// 宽 高 字体
+$template-number:10px;
+$percent:100%;
+//左右
+$template-lefts:left;
+$template-rights:right;
+$centers:center;
+$tops:top;
+//定位
+$template-relatives:relative;
+$absolutes:absolute;
+$autos:auto;
+//无
+$template-nones:none;
+$zeros:0;
+$repeats:no-repeat;
+$transparents:transparent;
+//线
+$solids:solid;
+//状态
+$inlines:inline;
+$blocks:block;
+$inlines-blocks:inline-block;
+$pointers:pointer;
+$boths:both;
+$hiddens:hidden;
+$bolds:bold;
+//颜色
+$colors-d:#ddd;
+$colors-e:#eee;
+$colors_6:#666;
+$colors_e2b:#e2bd00;
+$colors_f:#fff;
+$colors_9:#999;
+$colors_c:#ccc;
+$colors_3:#333;
+$colors_35b:#35b558;
+$colors_2d8:#2d85ca;
+$colors_34b:#34b34f;
+$colors_2e8:#2e85c8;
+$colors_328:#3287c8;
+$colors_ff5:#ff5c00;
+$colors_fdd:#fddeca;
+$colors_f5f:#f5f5f5;
+$colors_328:#3288cb;
+$colors_f3f:#f3fff6;
+$colors_41b:#41b962;
+
+$colors_1ed:#1ede9d;
+$colors_f54:#f54e4e;
+$colors_36b:#36b149;
+
+.outer{
+	height:$template-number*76;
+	width:$template-number*40;
+	background:$colors_1ed;
+	margin:$template-number*10 $autos;
+	border-radius:$template-number*20 $template-number*20 $zeros $zeros;
+	padding-top:$template-number*3;
+	//最上面的半圆
+	.round{
+		height:$template-number*11;
+		width:$template-number*34;
+		background:$colors_f54;
+		border-radius:$template-number*17 $template-number*17 $zeros $zeros;
+		margin:$zeros $autos;
+		padding-top:$template-number*6;
+		color:$colors_f;
+		font-size:$template-number*1.2;
+		text-align:$centers;
+		.p1{
+			font-size:$template-number*3.6;
+		}
+	}
+	//最外面的长方形
+	.square{
+		height:$template-number*24;
+		width:$template-number*34;
+		background:$colors_f;
+		margin:$zeros $autos;
+		margin-top:$template-number*2;
+		padding-top:$template-number*2;
+		//左边的内容   车次
+		.square-l{
+			float:$template-lefts;
+			width:$template-number*11;
+			height:$template-number*9;
+			.square-l-t{
+				height:$template-number*6;
+				background:$colors_f54;
+				font-size:$template-number*3.6;
+				color:$colors_f;
+				line-height:$template-number*6;
+				text-align:$centers;
+			}
+			.square-l-b{
+				font-size:$template-number*1.2;
+			}
+		}
+		//右边的内容   到站信息
+		.square-r{
+			float:$template-rights;
+			width:$template-number*21;
+			height:$template-number*9;
+			.p1{
+				font-size:$template-number*1.6;
+				color:$colors_36b;
+			}
+			.p2{
+				font-size:$template-number*1.2;
+				color:$colors_36b;
+			}
+			.p3{
+				font-size:$template-number*2;
+				color:$colors_f54;
+			}
+		}
+		//每一个站名 主体内容
+		.article{
+			height:$template-number*10;
+			background:$colors_36b;
+			clear:$boths;
+			writing-mode:tb-rl;
+			width:$template-number*32;
+			padding:$template-number $template-number;
+			color:$colors_f;
+			line-height:$template-number*2;
+			position:$template-relatives;
+			//站名下面的箭头
+			.rectangle{
+				width:$template-number;
+				height:$template-number*0.6;
+				background:$colors_f54;
+				position:$absolutes;
+				left:$template-number*23.5;
+				bottom:$template-number*0.5;
+				.triangle{
+					width:$zeros;
+					height:$zeros;
+					background:$transparents;
+					border:$template-number solid;
+					border-left-color:$transparents;
+					border-right-color:$transparents;
+					border-top-color:$transparents;
+					border-bottom-color:$colors_f54;
+					position:$absolutes;
+					left:-($template-number*0.5);
+					bottom:$template-number*0.6;
+				}
+			}
+		}
+		//底部信息
+		.footer{
+			width:$template-number*28;
+			text-align:$centers;
+			font-size:$template-number*1.2;
+			margin:$zeros $autos;
+			border-bottom:$template-number/5 $solids $colors_f54;
+			position:$template-relatives;
+			//底部那个小箭头
+			.arrow{
+					width:$zeros;
+					height:$zeros;
+					background:$transparents;
+					border:solid;
+					border-left-color:$colors_f54;
+					border-right-color:$transparents;
+					border-top-color:$transparents;
+					border-bottom-color:$transparents;
+					border-left-width:$template-number*2;
+					border-right-width:$zeros;
+					border-top-width:$template-number*0.8;
+					border-bottom-width:$zeros;
+					position:$absolutes;
+					left:$template-number*26.5;
+					bottom:-($template-number*0.2);
+					.arrow1{
+						width:$zeros;
+						height:$zeros;
+						background:$transparents;
+						border:solid;
+						border-left-color:$transparents;
+						border-right-color:$transparents;
+						border-top-color:$transparents;
+						border-bottom-color:$colors_f;
+						border-left-width:$zeros;
+						border-right-width:$template-number*0.6;
+						border-top-width:$zeros;
+						border-bottom-width:$template-number*1.5;
+						position:$absolutes;
+						left:-($template-number*2.4);
+						bottom:$template-number*0.2;
+					}
+			}
+		}
+	}
+}
+
+
